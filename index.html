@@ -1,158 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7b12bcc245.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Convite 1 ano do Dante Vicente</title>
-</head>
-<body style="background-color: #0097ff;">
-    <img src="bolof.png" style="z-index: 99; height: 350px; width: 300px; position: absolute; top: -9vh;left:10vw;">
+  </head>
+  <body style="background-color: #0097ff">
+    <img
+      src="bolof.png"
+      style="
+        z-index: 99;
+        height: 130px;
+        width: 230px;
+        position: absolute;
+        top: 9vh;
+        left: 19vw;
+      "
+    />
 
-
-    <nav style="background-color: #0097ff;">
-        <input type="checkbox" id="check" style="background-color: #0097ff;">
-        <label for="check" class="checkbtn"style="background-color: #0097ff;">
-            <i class="fas fa-bars"></i>
-        </label >
-        <label style="background-color: #0097ff;color:white;" class="logo">Dante Vicente</label>
-        <ul class="text"style="background-color: #0097ff;color:white;">
-            <li><a href="#story" onclick="myFunction()">Informações</a></li>
-            <li><a href="#stay" onclick="myFunction()">TRAVEL & STAY</a></li>
-            <li><a href="#registry" onclick="myFunction()">PROMISES</a></li>
-        </ul>
+    <nav style="background-color: #0097ff">
+      <label style="background-color: #0097ff; color: white" class="logo"
+        >Dante Vicente</label
+      >
     </nav>
 
+    <div
+      class="home hz-margin"
+      style="background-color: #0097ff; margin-top: 159px; color: white"
+    >
+      <h3 style="color: white">1 Ano do</h3>
+      <h1 style="color: white">Dante Vicente</h1>
+      <div class="container-out">
+        <de
+          class="container-in text"
+          style="color: white; font-size: 18px; line-height: 1"
+        >
+        &nbsp;&nbsp;  Terça-feira, 08 de Outubro <br>&nbsp;&nbsp;de 2024&nbsp;<br />
+        <br>
+        &nbsp;&nbsp;  Rua Mogi Das Cruzes, 10 &nbsp;&nbsp;&nbsp;CPA I <br />
 
-    <div class="home hz-margin" style="background-color: #0097ff;margin-top:159px;color:white;">
-        <h3 style=" color:white;">1 Ano do</h3>
-        <h1 style=" color:white;">Dante Vicente</h1>
-        <div class="container-out">
-            
-            <div class="container-in text" style=" color:white; font-size: 18PX;line-height: 1.0;">
-                Terça-feira, Dia 08 de Outubro de 2024 <br>
-
-                Rua Mogi Das Cruzes, casa 10, CPA1. <br>
-
-                <button class="huge-btn"style=" color:white; border-color: white;font-size: 15PX; margin: 30px">Confirmar Presença</button>
-                <button class="huge-btn"style=" color:white;border-color: white;font-size: 15PX;margin: 30px"> Olhar no Mapa   </button>
-            </div>
+          <button
+            class="huge-btn"
+            style="
+              color: white;
+              border-color: white;
+              font-size: 15px;
+              margin: 30px;
+            "
+          >
+            Confirmar Presença
+          </button>
+          <button
+            class="huge-btn"
+            style="
+              color: white;
+              border-color: white;
+              font-size: 15px;
+              margin: 30px;
+            "
+            onclick="abrirGoogleMaps()"
+          >
+           <img src="map.png" height="32px">Localização
+          </button>
         </div>
+      </div>
     </div>
     <div class="hands2" id="parallax3"></div>
 
-
     <div class="timeline hz-margin reveal">
-        <h2>Informações <br>
-            
-        </h2>
-        <div class="timeline-container">
-            <div class="timeline-img"></div>
-            <div class="timings">
-                <h3>01. A festa começará as 19:00 e terminará às 22:00.</h3>
-                <div class="text" style="font-size: 19px;">Importante: O Parabéns será as 21hrs!</div>
-                <h3>02. O espaço é limitado, portanto, 
-                    não traga acompanhantes que não estão na lista de convidados!</h3>
-                <div class="text"style="font-size: 19px;">  </div>
-                    <h3>03. Haverá um fotógrafo para registrar o dia tão especial, assim que recebermos as fotos, publicaremos por aqui para todos terem acesso. </h3>
-                    <div class="text"style="font-size: 19px;">  <br>
-                    
-                    </div>
-
-            </div>
+      <h2>Informações <br /></h2>
+      <div class="timeline-container">
+        <div class="timeline-img"></div>
+        <div class="timings">
+          <h3>01. A festa começará as 19:00 e terminará às 22:00.</h3>
+          <br />
+          <h3>
+            02. O espaço é limitado, portanto, não traga acompanhantes que não
+            estão na lista de convidados!
+          </h3>
+          <div class="text" style="font-size: 19px">
+            <h3>
+              03. Haverá um fotógrafo para registrar o dia tão especial, assim
+              que recebermos as fotos, publicaremos por aqui para todos terem
+              acesso.
+            </h3>
+            <br />
+            <h3>04. Importante: O parabéns será às 21:00hrs.</h3>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <div class="v-reposition-container">
-        <div class="h-reposition-container">
-
-
-            <div id="story" class="hz-margin">
-                <h3 class="reveal" style="font-size: 25px;"> Comemoração <br>
-                    
-                </h3>
-                <p class="text reveal" style="font-size: 22px;line-height: 0.96;">Não será como um dia normal, estaremos comemorando 1 ano do nascimento do nosso pequeno, um dia mais que especial, lembraremos de todo o desenvolvimento saudável do nosso Dante Vicente. Mamãe, Papai e Dante estarão ansiosos para comemorar com a família e amigos!</p>
-            </div>
-
-
-            <div class="gallery hz-margin reveal">
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-            </div>
-
-
-            <div class="quote reveal">
-                <h1>“Somos gratos em como a sua vinda nos trouxe tanto amor e felicidade a todos ao seu redor!”.</h1>
-                <div class="author text">Mamãe e Papai</div>
-            </div>
-
-
-            <div class="hands" id="parallax1"></div>
-
-
-            <div id="stay">
-                <h2 class="reveal">Ficou em dúvida de como presentear Dante? Aqui vai alguma ajuda!</h2>
-                <div class="stay-container reveal">
-                    <div class="stay-item"  style="font-size: 25px;">
-                        <h3>01. Tamanho de roupas:
-                        </h3>
-                        <div class="text" style="font-size: 19px;line-height: 0.96;"> Roupa: 02 a 03 anos. <br> Sapato: Número 23/24.</div>
-                       
-                    </div>
-                    <div class="stay-item">
-                        <h3>02. 
-                            Brinquedos
-                        </h3>
-                        <div class="text" style="font-size: 19px;line-height: 0.96;"> Dante ama volantes, qualquer coisa como bola de futebol, algo que faça barulho, coisas coloridas ou que ajudem em sua mobilidade, coisas que ele consiga encaixar ou montar. </div>
-                        
-                    </div>
-                    <div class="stay-item">
-                        <h3>03.  Acessórios
-                            
-                        </h3>
-                        <div class="text" style="font-size: 19px;line-height: 0.96;" > Boné, Pulseira/colar, óculos.</div>
-                        <div class="stay-item">
-                            <h3>04.  Itens de Higiene
-                                
-                            </h3>
-                            <div class="text" style="font-size: 19px;line-height: 0.96;" > Hidratante, kit banho, perfume, fralda XXG, lenço umedecido ... </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="registry">
-                <div class="registry-container reveal">
-                    <h3></h3>
-                    <div class="text">
-                        
-                    </div>
-                    
-                </div>
-                <div class="registry-img registry-img-lg" id="parallax2"></div>
-            </div>
-            <div class="registry-img registry-img-sm"></div>
-
-
-            <div class="parting-message reveal" style="margin-right:10%;">
-                <h1>Esperamos por você!</h1>
-                <button class="huge-btn"style="  font-size: 15PX; margin: 30px">Confirmar Presença</button>
-            </div>
-
-
-            <footer>
-                <h2>Give us a Call</h2>
-                <h2>Amandeep: 123-456-7890</h2>
-                <h2>Gurpreet: 123-456-7890</h2>
-                <div class="text">© 2023 for Aman and Gur. Made by <a href="https://twitter.com/NathArchak" class="text">@NathArchak</a></div>
-            </footer>
+      <div class="h-reposition-container">
+        <div id="story" class="hz-margin">
+          <h3 class="reveal" style="font-size: 25px">Comemoração <br /></h3>
+          <p class="text reveal" style="font-size: 22px; line-height: 0.96">
+            Não será como um dia normal, estaremos comemorando 1 ano do
+            nascimento do nosso pequeno, um dia mais que especial, lembraremos
+            de todo o desenvolvimento saudável do nosso Dante Vicente. Mamãe,
+            Papai e Dante estarão ansiosos para comemorar com a família e
+            amigos!
+          </p>
         </div>
-    </div>
 
+        <div class="gallery hz-margin reveal">
+          <div class="gallery-img"></div>
+          <div class="gallery-img"></div>
+          <div class="gallery-img"></div>
+        </div>
+
+        <div class="quote reveal">
+          <h1>
+            “Somos gratos por como a sua chegada trouxe tanto amor e felicidade
+            a todos ao seu redor!”.
+          </h1>
+          <div class="author text">Mamãe e Papai</div>
+        </div>
+
+        <div class="hands" id="parallax1"></div>
+
+        <div id="stay">
+          <h2 class="reveal">
+            Ficou em dúvida de como presentear Dante? Aqui vai alguma ajuda!
+          </h2>
+          <div class="stay-container reveal">
+            <div class="stay-item" style="font-size: 25px">
+              <h3>01. Tamanho de roupas:</h3>
+              <div class="text" style="font-size: 19px; line-height: 0.96">
+                Roupa: 02 a 03 anos. <br />
+                Sapato: Número 23/24.
+              </div>
+            </div>
+            <div class="stay-item">
+              <h3>02. Brinquedos</h3>
+              <div class="text" style="font-size: 19px; line-height: 0.96">
+                Dante ama volantes, qualquer coisa como bola de futebol, algo
+                que faça barulho, coisas coloridas ou que ajudem em sua
+                mobilidade, coisas que ele consiga encaixar ou montar.
+              </div>
+            </div>
+            <div class="stay-item">
+              <h3>03. Acessórios</h3>
+              <div class="text" style="font-size: 19px; line-height: 0.96">
+                Boné, Pulseira/colar, óculos.
+              </div>
+              <div class="stay-item">
+                <h3>04. Itens de Higiene</h3>
+                <div class="text" style="font-size: 19px; line-height: 0.96">
+                  Hidratante, kit banho, perfume, fralda XXG, lenço umedecido
+                  ...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="registry"
+            style="padding-left: 0%; padding-top: 15px; padding-right: 0"
+          >
+            <div class="reveal;">
+              <div
+                class="reveal"
+                id="bolof"
+                style="
+                  height: 170px;
+                  width: 100% !important;
+                  margin-bottom: 20px;
+                "
+              ></div>
+            </div>
+            <div class="registry-container reveal">
+              <h3>
+                Lembrando que o importante é você estar lá para comemorar
+                conosco!
+              </h3>
+              <div class="text"></div>
+            </div>
+            <div class="registry-img registry-img-lg" id="parallax2"></div>
+          </div>
+          <div class="registry-img registry-img-sm"></div>
+
+          <div class="parting-message reveal">
+            <h1 style="margin-right: 25px; text-align: center; font-size: 53px">
+              Esperamos por você!
+            </h1>
+            <button class="huge-btn" style="font-size: 15px; margin: 30px">
+              Confirmar Presença
+            </button>
+          </div>
+
+          <footer>
+            <h2>Qualquer dúvida entre em contato com o Papai e a Mamãe!</h2>
+            <br />
+            <h2>Mamâe: (65) 99309-5534</h2>
+            <h2>Papai: (64) 99248-4751</h2>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      function abrirGoogleMaps() {
+        // Substitua o endereço abaixo pelo que você deseja abrir no Google Maps
+        const endereco = "Rua Mogi das Cruzes, 10, Cuiabá MT";
+
+        // Crie a URL do Google Maps com o endereço
+        const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+          endereco
+        )}`;
+
+        // Abra o Google Maps em uma nova aba
+        window.open(url, "_blank");
+      }
+    </script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

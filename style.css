@@ -252,7 +252,7 @@ a:hover {
   margin: 8vh 0;
 }
 .timeline-img {
-  background-image: url(dante1.jpeg);
+  background-image: url(dante3.jpeg);
   height: 70vh;
   width: 30vw;
   background-position: center;
@@ -460,7 +460,7 @@ a:hover {
   display: block;
   height: 100vh;
   width: 40vw;
-  background-image: url(dante3.jpeg);
+  background-image: url(dante1.jpeg);
   background-size: cover;
   background-position-y: top;
   background-repeat: no-repeat;

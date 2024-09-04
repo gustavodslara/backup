@@ -39,7 +39,12 @@
       <div class="container-out">
         <div
           class="container-in text"
-          style="color: white; font-size: 18px; line-height: 1;margin-top: -39px;"
+          style="
+            color: white;
+            font-size: 18px;
+            line-height: 1;
+            margin-top: -39px;
+          "
         >
           &nbsp;&nbsp; Terça-feira, 08 de Outubro <br />&nbsp;&nbsp;&nbsp;de
           2024, às 19:00h&nbsp;<br />
@@ -48,27 +53,86 @@
 
           <button
             class="huge-btn"
+            id="btncon"
             style="
               color: white;
               border-color: white;
               font-size: 15px;
               margin: 30px;
-            " onclick="toggleModal()"
+            "
           >
             Confirmar Presença
           </button>
-          <div id="modal" class="modal" style="z-index: 9999;">
-            <div class="modal-content" style="top: 17%; align-items: center;">
-              <span style="z-index: 999999 ; position:relative;"  class="close">&times;</span>
-              <h2 style="z-index: 99999 ; position:relative;" >Confirme sua presença</h2>
+          <div id="modal" class="modal" style="z-index: 9999">
+            <div class="modal-content" style="top: 17%; align-items: center">
+              <span style="z-index: 999999; position: relative" class="close"
+                >&times;</span
+              >
+              <h2 style="z-index: 99999; position: relative">Confirmar</h2>
               <form id="myForm">
-                <label style="z-index: 99999 ; position:relative;"  for="nome1">Insira o nome de cada convidado que comparecerá:;</label>
-                <input style="z-index: 99999 ; position:relative;background-color: white;margin-bottom: 10px;width: 100%;"  type="text" id="nome1" name="nome1" placeholder="Nome 1">
-                <input style="z-index: 99999 ; position:relative;background-color: white;margin-bottom: 10px;width: 100%;"  type="text" id="nome2" name="nome2" placeholder="Nome 2">
-                <input style="z-index: 99999 ; position:relative;background-color: white;margin-bottom: 10px;width: 100%;"  type="text" id="nome3" name="nome3" placeholder="Nome 3">
-                <input style="z-index: 99999 ; position:relative;background-color: white;margin-bottom: 10px;width: 100%;"  type="text" id="nome4" name="nome4" placeholder="Nome 4">
-                <input style="z-index: 99999 ; position:relative;background-color: white;margin-bottom: 10px; width: 100%;"  type="text" id="nome5" name="nome5" placeholder="Nome 5">
-                <button style="z-index: 99999 ; position:relative; margin-left: 27%;" type="submit">Confirmar</button>
+                <!-- Campos de nome 1 e 2 (iniciais) -->
+                <input style="
+                z-index: 99999;
+                position: relative;
+                background-color: white;
+                margin-bottom: 10px;
+                width: 100%;
+                border-radius: 8px;
+                height: 35px;
+              " type="text" id="nome1" name="nome1" placeholder="Nome 1">
+
+                <input style="
+                z-index: 99999;
+                position: relative;
+                background-color: white;
+                margin-bottom: 10px;
+                width: 100%;
+                border-radius: 8px;
+                height: 35px;
+              " type="text" id="nome2" name="nome2" placeholder="Nome 2">
+              
+                <!-- Botão para adicionar mais nomes -->
+                
+              
+                <!-- Campos de nome 3, 4 e 5 (inicialmente ocultos) -->
+                <div id="camposAdicionais" style="display: none;">
+                  <input style="
+                  z-index: 99999;
+                  position: relative;
+                  background-color: white;
+                  margin-bottom: 10px;
+                  width: 100%;
+                  border-radius: 8px;
+                  height: 35px;
+                "  type="text" id="nome3" name="nome3" placeholder="Nome 3">
+
+                  <input style="
+                  z-index: 99999;
+                  position: relative;
+                  background-color: white;
+                  margin-bottom: 10px;
+                  width: 100%;
+                  border-radius: 8px;
+                  height: 35px;
+                " type="text" id="nome4" name="nome4" placeholder="Nome 4">
+
+                  <input style="
+                  z-index: 99999;
+                  position: relative;
+                  background-color: white;
+                  margin-bottom: 10px;
+                  width: 100%;
+                  border-radius: 8px;
+                  height: 35px;
+                " type="text" id="nome5" name="nome5" placeholder="Nome 5">
+               
+            </div>
+            <button style="z-index: 99999; position: relative;
+            margin-left: 16%; border-radius: 6px;"
+             type="button" onclick="mostrarCamposAdicionais()">Adicionar mais nomes</button>
+                  
+             <br>
+             <button style="z-index: 9999; position: relative; margin-left: 27%; margin-top: 10px;" type="submit">Confirmar</button>
               </form>
             </div>
           </div>
@@ -113,16 +177,16 @@
               <b>aqui</b> para vocês.
             </h3>
             <img
-      src="bolofofos_juntos.png"
-      style="
-        z-index: 99;
-        height: 150px;
-        width: 328px;
-        position: absolute;
-        top: 139vh;
-        left: 7vw;
-      "
-    />
+              src="bolofofos_juntos.png"
+              style="
+                z-index: 99;
+                height: 150px;
+                width: 328px;
+                position: absolute;
+                top: 139vh;
+                left: 7vw;
+              "
+            />
             <!-- <h3>04. Importante: O parabéns será às 21:00hrs.</h3> -->
           </div>
         </div>
@@ -132,13 +196,18 @@
     <div class="v-reposition-container">
       <div class="h-reposition-container">
         <div id="story" class="hz-margin">
-          <h3 class="reveal" style="font-size: 25px;color: white;">Comemoração <br /></h3>
-          <p class="text reveal" style="font-size: 22px; line-height: 0.96;color: white;">
+          <h3 class="reveal" style="font-size: 25px; color: white">
+            Comemoração <br />
+          </h3>
+          <p
+            class="text reveal"
+            style="font-size: 22px; line-height: 0.96; color: white"
+          >
             Não será como um dia normal, estaremos comemorando 1 ano do
             nascimento do nosso pequeno, um dia mais que especial, lembraremos
             de todo o desenvolvimento saudável do nosso Dante Vicente. Mamãe,
             Papai e Dante estarão ansiosos para comemorar com a família e
-            amigos!
+            amigos! Relembre os primeiros momentos:
           </p>
         </div>
 
@@ -146,11 +215,11 @@
           <div
             id="coruja"
             style="
-              height: 130px;
-              width: 130px;
+              height: 139px;
+              width: 139px;
               position: absolute;
               z-index: 9999;
-              margin-bottom: 120vh;
+              margin-bottom: 150vh;
               left: 0;
             "
           ></div>
@@ -166,52 +235,52 @@
               right: 0;
             "
           ></div>
-          
+
           <div class="gallery-img gallery-img2"></div>
           <div
-          id="sophie"
-          style="
-            height: 150px;
-              width: 150px;
+            id="sophie"
+            style="
+              height: 160px;
+              width: 160px;
               position: absolute;
               z-index: 9999;
-              margin-bottom:-38vh;
+              margin-bottom: -38vh;
               left: 0 !important;
-          "
-        ></div>
+            "
+          ></div>
 
           <div class="gallery-img gallery-img3"></div>
           <div
-          id="bunny"
-          style="
-            height: 145px;
+            id="bunny"
+            style="
+              height: 145px;
               width: 145px;
               position: absolute;
               z-index: 9999;
-              margin-bottom:-137vh;
+              margin-bottom: -137vh;
               right: 0 !important;
-          "
-        ></div>
+            "
+          ></div>
         </div>
 
-        <div class="quote reveal" >
-          <h1 style="color: white;">
+        <div class="quote reveal">
+          <h1 style="color: white">
             “Somos gratos por como a sua chegada trouxe tanto amor e felicidade
             a todos ao seu redor!”.
           </h1>
-          <div class="author text"style="color: white;">Mamãe e Papai</div>
+          <div class="author text" style="color: white">Mamãe e Papai</div>
         </div>
 
         <div class="hands" id="parallax1"></div>
 
-        <div class="timeline reveal">
+        <div class="timeline ">
           <div class="timeline-container" class="secao-com-imagem">
             <img
               src="fundo.jpg"
               alt="Imagem de Fundo"
               class="imagem-de-fundo"
             />
-            <div id="stay" style="margin: 0; padding: 0;">
+            <div id="stay" style="margin: 0; padding: 0">
               <div id="stay2">
                 <h2 class="reveal">
                   Ficou em dúvida de como presentear Dante? Aqui vai alguma
@@ -222,7 +291,11 @@
                     <h3>01. Tamanho de roupas:</h3>
                     <div
                       class="text"
-                      style="font-size: 19px; line-height: 0.96;  margin-bottom: 0;"
+                      style="
+                        font-size: 19px;
+                        line-height: 0.96;
+                        margin-bottom: 0;
+                      "
                     >
                       Roupa: 02 a 03 anos. <br />
                       Sapato: Número 23/24.
@@ -232,7 +305,11 @@
                     <h3>02. Brinquedos</h3>
                     <div
                       class="text"
-                      style="font-size: 19px; line-height: 0.96; margin-bottom: 0;"
+                      style="
+                        font-size: 19px;
+                        line-height: 0.96;
+                        margin-bottom: 0;
+                      "
                     >
                       Dante ama volantes, qualquer coisa como bola de futebol,
                       algo que faça barulho, coisas coloridas, algo que ajude em
@@ -244,7 +321,11 @@
                     <h3>03. Acessórios</h3>
                     <div
                       class="text"
-                      style="font-size: 19px; line-height: 0.96; margin-bottom: 0;"
+                      style="
+                        font-size: 19px;
+                        line-height: 0.96;
+                        margin-bottom: 0;
+                      "
                     >
                       Boné, Pulseira/colar, óculos.
                     </div>
@@ -252,7 +333,11 @@
                       <h3>04. Itens de Higiene</h3>
                       <div
                         class="text"
-                        style="font-size: 19px; line-height: 0.96; margin-bottom: 0;"
+                        style="
+                          font-size: 19px;
+                          line-height: 0.96;
+                          margin-bottom: 0;
+                        "
                       >
                         Hidratante, kit banho, perfume. ...
                       </div>
@@ -283,12 +368,15 @@
                     <div class="text"></div>
                   </div>
                   <div
-                   style="margin-top: 0;"
+                    style="margin-top: 0"
                     class="registry-img registry-img-lg"
                     id="parallax2"
                   ></div>
                 </div>
-                <div  style="margin-top: 0;" class="registry-img registry-img-sm"></div>
+                <div
+                  style="margin-top: 0"
+                  class="registry-img registry-img-sm"
+                ></div>
 
                 <div class="parting-message reveal">
                   <h1
@@ -301,21 +389,38 @@
                     Esperamos por você!
                   </h1>
                   <button
+                    id="btncon"
                     class="huge-btn"
                     style="font-size: 15px; margin: 30px"
+                    onclick="toggleModal()"
                   >
                     Confirmar Presença
                   </button>
+                  
                 </div>
 
-                <footer style="background-color: transparent;">
+                <footer style="background-color: transparent">
                   <h2>
-                    Qualquer <b>dúvida</b> entre em contato com o Papai e a Mamãe!
+                    Qualquer <b>dúvida</b> entre em contato com o Papai e a
+                    Mamãe!
                   </h2>
                   <br />
-                  <img src="zap.webp" alt="Ícone de contato" style="width: 50px;margin-right: 10px;float: left; "/><h2>Mamâe:<a href="https://wa.link/ejfm4l">(65) 99309-5534</a></h2> 
-                  <img src="zap.webp" alt="Ícone de contato" style="width: 50px;margin-right: 10px;float: left; " /><h2>Papai: <a href="https://wa.link/cfy8yl">(65) 99248-4751</a></h2>
-                 
+                  <img
+                    src="zap.webp"
+                    alt="Ícone de contato"
+                    style="width: 50px; margin-right: 10px; float: left"
+                  />
+                  <h2>
+                    Mamâe:<a href="https://wa.link/ejfm4l">(65) 99309-5534</a>
+                  </h2>
+                  <img
+                    src="zap.webp"
+                    alt="Ícone de contato"
+                    style="width: 50px; margin-right: 10px; float: left"
+                  />
+                  <h2>
+                    Papai: <a href="https://wa.link/cfy8yl">(65) 99248-4751</a>
+                  </h2>
                 </footer>
               </div>
             </div>
@@ -339,50 +444,54 @@
     </script>
     <script src="main.js"></script>
     <script>
-        function toggleModal() {
-  const modal = document.getElementById('modal');
-  modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
-}
+      function toggleModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = modal.style.display === "none" ? "block" : "none";
+      }
 
-const span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  modal.style.display = "none";
-}
-    
-        function addNameField() {
-          const namesContainer = document.getElementById('names-container');
-          const newField = document.createElement('input');
-          newField.type = 'text';
-          newField.name = `nome${namesContainer.childElementCount + 1}`;
-          newField.placeholder = `Nome ${namesContainer.childElementCount + 1}`;
-          namesContainer.appendChild(newField);
-        }
-    
-        // Função para enviar os dados para o JSON Server
-        function submitForm(event) {
-          event.preventDefault();
-          const formData = new FormData(document.getElementById('myForm'));
-          const data = Object.fromEntries(formData.entries());
-    
-          fetch('https://seu-endpoint-json-server.herokuapp.com/presencas', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          })
-          .then(response => response.json())
-          .then(data => {
-            console.log('Success:',   
-     data);
+      const btn = document.getElementById("btncon");
+      btn.onclick = function () {
+        const modal = document.getElementById("modal");
+        modal.style.display = modal.style.display === "none" ? "block" : "none";
+      };
+
+      const span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      function addNameField() {
+        const namesContainer = document.getElementById("names-container");
+        const newField = document.createElement("input");
+        newField.type = "text";
+        newField.name = `nome${namesContainer.childElementCount + 1}`;
+        newField.placeholder = `Nome ${namesContainer.childElementCount + 1}`;
+        namesContainer.appendChild(newField);
+      }
+
+      // Função para enviar os dados para o JSON Server
+      function submitForm(event) {
+        event.preventDefault();
+        const formData = new FormData(document.getElementById("myForm"));
+        const data = Object.fromEntries(formData.entries());
+
+        fetch("https://seu-endpoint-json-server.herokuapp.com/presencas", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
           })
           .catch((error) => {
-            console.error('Error:', error);
+            console.error("Error:", error);
           });
-        }
-    
-        document.getElementById('myForm').addEventListener('submit',   
-     submitForm);
-      </script>
+      }
+
+      document.getElementById("myForm").addEventListener("submit", submitForm);
+    </script>
   </body>
 </html>

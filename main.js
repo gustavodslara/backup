@@ -20,7 +20,7 @@ window.addEventListener("scroll", function()
 window.addEventListener("scroll", function()
 {
     let offset = window.pageYOffset;
-    offset-=5000;
+    offset-=4800;
     parallax1.style.backgroundPositionY = offset*(0.1) + "px";
 })
 
@@ -79,3 +79,7 @@ function submitForm(event) {
     console.error('Error:', error);
   });
 }
+
+  function mostrarCamposAdicionais() {
+    document.getElementById('camposAdicionais').style.display = 'block';
+  }

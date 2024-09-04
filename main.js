@@ -20,7 +20,7 @@ window.addEventListener("scroll", function()
 window.addEventListener("scroll", function()
 {
     let offset = window.pageYOffset;
-    offset-=3100;
+    offset-=5000;
     parallax1.style.backgroundPositionY = offset*(0.1) + "px";
 })
 
@@ -54,3 +54,28 @@ for (var i = 0; i < reveals.length; i++) {
 }
   
 window.addEventListener("scroll", reveal);
+function submitForm(event) {
+  event.preventDefault();
+  const formData = new FormData(document.getElementById('myForm'));
+  const data = Object.fromEntries(formData.entries());
+
+  fetch('https://seu-endpoint-json-server.herokuapp.com/presencas', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:',   
+ data);
+    // Limpar o formulário
+    document.getElementById('myForm').reset();
+    // Fechar a modal
+    toggleModal();
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}

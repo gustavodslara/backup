@@ -10,6 +10,12 @@
       crossorigin="anonymous"
     ></script>
     <title>Convite 1 ano do Dante Vicente</title>
+    <meta property="og:title" content="Convidamos você e sua família" />
+    <meta property="og:description" content="Para o aniversário." />
+    <meta property="og:image" content="preview.png" />
+    <!-- <meta property="og:image" content="https://yourdomain.com/path/to/image.jpg" /> -->
+    <meta property="og:url" content="https://aniversariododante.info" />
+    <meta property="og:type" content="website" />
   </head>
   <body style="background-color: #0097ff">
     <img
@@ -53,13 +59,13 @@
 
           <button
             class="huge-btn"
-            id="btncon"
             style="
               color: white;
               border-color: white;
               font-size: 15px;
               margin: 30px;
             "
+            onclick="toggleModal()"
           >
             Confirmar Presença
           </button>
@@ -68,71 +74,131 @@
               <span style="z-index: 999999; position: relative" class="close"
                 >&times;</span
               >
-              <h2 style="z-index: 99999; position: relative">Confirmar</h2>
-              <form id="myForm">
+              <h2
+                style="z-index: 99999 !important; position: relative !important"
+              >
+                Confirmar Presença
+              </h2>
+              <br />
+              <h2 style="font-size: 18px">
+                Digite abaixo o nome de cada convidado que irá comparecer.
+              </h2>
+              <br />
+              <form id="myForm" method="POST">
                 <!-- Campos de nome 1 e 2 (iniciais) -->
-                <input style="
-                z-index: 99999;
-                position: relative;
-                background-color: white;
-                margin-bottom: 10px;
-                width: 100%;
-                border-radius: 8px;
-                height: 35px;
-              " type="text" id="nome1" name="nome1" placeholder="Nome 1">
+                <input
+                  style="
+                    z-index: 99999;
+                    position: relative;
+                    background-color: white;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    border-radius: 8px;
+                    height: 35px;
+                  "
+                  type="text"
+                  id="nome1"
+                  name="nome1"
+                  placeholder="Nome 1"
+                />
 
-                <input style="
-                z-index: 99999;
-                position: relative;
-                background-color: white;
-                margin-bottom: 10px;
-                width: 100%;
-                border-radius: 8px;
-                height: 35px;
-              " type="text" id="nome2" name="nome2" placeholder="Nome 2">
-              
+                <input
+                  style="
+                    z-index: 99999;
+                    position: relative;
+                    background-color: white;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    border-radius: 8px;
+                    height: 35px;
+                  "
+                  type="text"
+                  id="nome2"
+                  name="nome2"
+                  placeholder="Nome 2"
+                />
+
                 <!-- Botão para adicionar mais nomes -->
-                
-              
+
                 <!-- Campos de nome 3, 4 e 5 (inicialmente ocultos) -->
-                <div id="camposAdicionais" style="display: none;">
-                  <input style="
-                  z-index: 99999;
-                  position: relative;
-                  background-color: white;
-                  margin-bottom: 10px;
-                  width: 100%;
-                  border-radius: 8px;
-                  height: 35px;
-                "  type="text" id="nome3" name="nome3" placeholder="Nome 3">
+                <div id="camposAdicionais" style="display: none">
+                  <input
+                    style="
+                      z-index: 99999;
+                      position: relative;
+                      background-color: white;
+                      margin-bottom: 10px;
+                      width: 100%;
+                      border-radius: 8px;
+                      height: 35px;
+                    "
+                    type="text"
+                    id="nome3"
+                    name="nome3"
+                    placeholder="Nome 3"
+                  />
 
-                  <input style="
-                  z-index: 99999;
-                  position: relative;
-                  background-color: white;
-                  margin-bottom: 10px;
-                  width: 100%;
-                  border-radius: 8px;
-                  height: 35px;
-                " type="text" id="nome4" name="nome4" placeholder="Nome 4">
+                  <input
+                    style="
+                      z-index: 99999;
+                      position: relative;
+                      background-color: white;
+                      margin-bottom: 10px;
+                      width: 100%;
+                      border-radius: 8px;
+                      height: 35px;
+                    "
+                    type="text"
+                    id="nome4"
+                    name="nome4"
+                    placeholder="Nome 4"
+                  />
 
-                  <input style="
-                  z-index: 99999;
-                  position: relative;
-                  background-color: white;
-                  margin-bottom: 10px;
-                  width: 100%;
-                  border-radius: 8px;
-                  height: 35px;
-                " type="text" id="nome5" name="nome5" placeholder="Nome 5">
-               
-            </div>
-            <button style="z-index: 99999; position: relative;
-            margin-left: 16%; border-radius: 6px;"
-             type="button" onclick="mostrarCamposAdicionais()">Adicionar mais nomes</button>
-                  
-             <br>
-             <button style="z-index: 9999; position: relative; margin-left: 27%; margin-top: 10px;" type="submit">Confirmar</button>
+                  <input
+                    style="
+                      z-index: 99999;
+                      position: relative;
+                      background-color: white;
+                      margin-bottom: 10px;
+                      width: 100%;
+                      border-radius: 8px;
+                      height: 35px;
+                    "
+                    type="text"
+                    id="nome5"
+                    name="nome5"
+                    placeholder="Nome 5"
+                  />
+                </div>
+                <button
+                  style="
+                    z-index: 99999;
+                    position: relative;
+                    font-size: 12px;
+                    height: 33px;
+                    margin-left: 16%;
+                    border-radius: 6px;
+                    color: black;
+                    font-weight: 800;
+                  "
+                  type="button"
+                  onclick="mostrarCamposAdicionais()"
+                >
+                  Adicionar mais nomes
+                </button>
+
+                <br />
+                <button
+                  style="
+                    z-index: 9999;
+                    position: relative;
+                    margin-left: 27%;
+                    margin-top: 10px;
+                  "
+                  type="submit"
+                >
+                  Confirmar
+                </button>
               </form>
             </div>
           </div>
@@ -180,7 +246,7 @@
               src="bolofofos_juntos.png"
               style="
                 z-index: 99;
-                height: 150px;
+                height: 130px;
                 width: 328px;
                 position: absolute;
                 top: 139vh;
@@ -273,7 +339,7 @@
 
         <div class="hands" id="parallax1"></div>
 
-        <div class="timeline ">
+        <div class="timeline">
           <div class="timeline-container" class="secao-com-imagem">
             <img
               src="fundo.jpg"
@@ -391,12 +457,16 @@
                   <button
                     id="btncon"
                     class="huge-btn"
-                    style="font-size: 15px; margin: 30px"
+                    style="
+                      font-size: 15px;
+                      margin: 30px;
+                      z-index: 99999 !important;
+                      position: relative;
+                    "
                     onclick="toggleModal()"
                   >
                     Confirmar Presença
                   </button>
-                  
                 </div>
 
                 <footer style="background-color: transparent">
@@ -428,6 +498,48 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent
+
+        const data1 = document.getElementById("nome1").value;
+        const data2 = document.getElementById("nome2").value;
+        const data3 = document.getElementById("nome3").value;
+        const data4 = document.getElementById("nome4").value;
+        const data5 = document.getElementById("nome5").value;
+
+        const data = {
+          nome1: data1,
+          nome2: data2,
+          nome3: data3,
+          nome4: data4,
+          nome5: data5,
+          dataConfirmacao: new Date()
+        };
+
+        fetch("https://api.aniversariododante.info/confirmados", {
+          // Assuming form's action attribute points to your server endpoint
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            // Handle the server's response here
+            if (response.ok) {
+              console.log("Data sent successfully!");
+            } else {
+              console.error("Error sending data!");
+            }
+          })
+          .catch((error) => {
+            console.error("Network error:", error);
+          });
+      });
+    </script>
     <script>
       function abrirGoogleMaps() {
         // Substitua o endereço abaixo pelo que você deseja abrir no Google Maps
@@ -448,12 +560,7 @@
         const modal = document.getElementById("modal");
         modal.style.display = modal.style.display === "none" ? "block" : "none";
       }
-
-      const btn = document.getElementById("btncon");
-      btn.onclick = function () {
-        const modal = document.getElementById("modal");
-        modal.style.display = modal.style.display === "none" ? "block" : "none";
-      };
+      toggleModal();
 
       const span = document.getElementsByClassName("close")[0];
       span.onclick = function () {
@@ -470,28 +577,26 @@
       }
 
       // Função para enviar os dados para o JSON Server
-      function submitForm(event) {
-        event.preventDefault();
-        const formData = new FormData(document.getElementById("myForm"));
-        const data = Object.fromEntries(formData.entries());
+      //   function submitForm(event) {
+      //     event.preventDefault();
+      //     const formData = new FormData(document.getElementById("myForm"));
+      //     const data = Object.fromEntries(formData.entries());
 
-        fetch("https://seu-endpoint-json-server.herokuapp.com/presencas", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success:", data);
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-      }
-
-      document.getElementById("myForm").addEventListener("submit", submitForm);
+      //     fetch("https://seu-endpoint-json-server.herokuapp.com/presencas", {
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //       body: JSON.stringify(data),
+      //     })
+      //       .then((response) => response.json())
+      //       .then((data) => {
+      //         console.log("Success:", data);
+      //       })
+      //       .catch((error) => {
+      //         console.error("Error:", error);
+      //       });
+      //   }
     </script>
   </body>
 </html>
